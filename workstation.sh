@@ -8,6 +8,7 @@ USERID=$(id -u)
 LOGSDIR=/tmp
 # /home/centos/shellscript-logs/script-name-date.log
 SCRIPT_NAME=$(basename "$0")
+DATE=$(date +%F)
 LOGFILE=$LOGSDIR/$SCRIPT_NAME-$DATE.log
 
 echo -e "$Y This script runs on CentOS 8 $N"
