@@ -52,20 +52,20 @@ usermod -aG docker centos &>>$LOGFILE
 
 VALIDATE $? "centos user added to docker group"
 
-curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
+curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp &>>$LOGFILE
 VALIDATE $? "Downloaded eksctl command"
-chmod +x /tmp/eksctl
+chmod +x /tmp/eksctl &>>$LOGFILE
 VALIDATE $?  "Added execute permissions to eksctl"
-mv /tmp/eksctl /usr/local/bin
+mv /tmp/eksctl /usr/local/bin &>>$LOGFILE
 VALIDATE $? "moved eksctl to bin folder"
 
-curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
-sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl" &>>$LOGFILE
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl &>>$LOGFILE
 
 VALIDATE $? "kubectl installed"
 
-git clone https://github.com/ahmetb/kubectx /opt/kubectx
-ln -s /opt/kubectx/kubens /usr/local/bin/kubens
+git clone https://github.com/ahmetb/kubectx /opt/kubectx &>>$LOGFILE
+ln -s /opt/kubectx/kubens /usr/local/bin/kubens &>>$LOGFILE
 
 VALIDATE $? "kubens Installation"
 

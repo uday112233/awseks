@@ -14,6 +14,10 @@ Run the script to install automatically.
 sudo sh workstation.sh
 ```
 3. We are using Default VPC with allow-all security group.
+4. Configure AWS.
+```
+aws configure
+```
 
 ### EKS
 EKS is AWS kubernetes service. EKS is the master node completely managed by AWS. We can't have SSH access to it.
