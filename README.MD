@@ -11,7 +11,7 @@ We can use AWS eksctl command line approach to create EKS cluster. Setup is like
     * Kubens
 Run the script to install automatically.
 ```
-curl | sudo bash
+sudo sh workstation.sh
 ```
 3. We are using Default VPC with allow-all security group.
 
