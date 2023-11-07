@@ -14,7 +14,7 @@ Run the script to install automatically.
 sudo sh workstation.sh
 ```
 3. We are using Default VPC with allow-all security group.
-4. Configure AWS.
+4. Configure AWS. this EC2 instance should have access to provision EKS cluster.
 ```
 aws configure
 ```
@@ -30,4 +30,4 @@ EKS is AWS kubernetes service. EKS is the master node completely managed by AWS.
 eksctl create cluster --config-file=eks.yaml
 ```
 
-![alt text](eksctl.jpg)
+![alt text](images/eksctl.png)
