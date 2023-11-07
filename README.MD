@@ -30,4 +30,4 @@ EKS is AWS kubernetes service. EKS is the master node completely managed by AWS.
 eksctl create cluster --config-file=eks.yaml
 ```
 
-![alt text](images/eksctl.png)
+![alt text](./images/eksctl.png)
