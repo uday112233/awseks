@@ -10,7 +10,7 @@ managedNodeGroups: # this is also completely managed by AWS
     instanceType: m5.large
     # your K8 node can be anytime taken back by AWS
     spot: true
-    availabilityZones:
+    availabilityZones: # ebs static provisioning
     - us-east-1a
     desiredCapacity: 3
     ssh:
